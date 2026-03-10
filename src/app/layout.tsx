@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider, ThemeSwitcher } from "@/components/ThemeProvider";
+import { LinesBackground } from "@/components/LinesBackground";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Blue Clarity | Web3 Marketing & Strategy",
-  description: "Building brands in crypto. Narrative strategy, GTM, 0→1 builds.",
+  description: "Building crypto brands. Narrative strategy, GTM, 0→1 builds.",
   openGraph: {
     title: "Blue Clarity",
     description: "Web3 Marketing & Strategy",
@@ -18,7 +20,7 @@ export const metadata: Metadata = {
     card: "summary",
     title: "Blue Clarity",
     description: "Web3 Marketing & Strategy",
-    creator: "@blueclarityone",
+    creator: "@blue_clarity",
   },
 };
 
@@ -29,7 +31,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>{children}</body>
+      <body className={`${inter.className} antialiased bg-[#0a1628]`}>
+        <ThemeProvider>
+          <LinesBackground />
+          {children}
+          <ThemeSwitcher />
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
