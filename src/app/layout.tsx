@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider, ThemeSwitcher } from "@/components/ThemeProvider";
+import { ThemeProvider } from "@/components/ThemeProvider";
 import { LinesBackground } from "@/components/LinesBackground";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -18,7 +18,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ThemeProvider>
           <LinesBackground />
           {children}
-          <ThemeSwitcher />
         </ThemeProvider>
       </body>
     </html>

@@ -1,10 +1,7 @@
 "use client";
 import Link from "next/link";
-import { useTheme } from "@/components/ThemeProvider";
 
 export default function Home() {
-  const { colors } = useTheme();
-
   return (
     <main className="min-h-screen text-white relative overflow-hidden">
       {/* Content */}
@@ -13,8 +10,7 @@ export default function Home() {
         <nav className="flex items-center justify-between p-8">
           <Link 
             href="/" 
-            className="text-sm font-medium hover:opacity-80 transition-opacity tracking-wide"
-            style={{ color: colors.primary }}
+            className="text-sm font-medium hover:opacity-80 transition-opacity tracking-wide text-blue-400"
           >
             BLUE CLARITY
           </Link>
@@ -28,12 +24,11 @@ export default function Home() {
         {/* Hero */}
         <div className="flex-1 flex flex-col justify-start px-8 pt-24 md:pt-32 max-w-4xl">
           <h1 className="text-6xl md:text-8xl font-light leading-[1.1] mb-8">
-            <span style={{ color: colors.primary }}>Web3 Marketing</span>
+            <span className="animate-gradient-text bg-gradient-to-r from-blue-400 via-cyan-400 via-purple-400 via-orange-400 to-blue-400 bg-[length:300%_100%] bg-clip-text text-transparent">
+              Web3 Marketing
+            </span>
             <br />
-            <span 
-              className="text-transparent bg-clip-text"
-              style={{ backgroundImage: `linear-gradient(to right, ${colors.primary}, ${colors.secondary})` }}
-            >
+            <span className="animate-gradient-text bg-gradient-to-r from-cyan-400 via-purple-400 via-orange-400 via-blue-400 to-cyan-400 bg-[length:300%_100%] bg-clip-text text-transparent" style={{ animationDelay: '0.5s' }}>
               & Brand Strategy
             </span>
           </h1>
@@ -43,7 +38,7 @@ export default function Home() {
           
           {/* Accent line */}
           <div className="mt-12 flex items-center gap-4">
-            <div className="h-px w-16" style={{ backgroundImage: `linear-gradient(to right, ${colors.primary}, ${colors.secondary})` }} />
+            <div className="h-px w-16 bg-gradient-to-r from-blue-500 to-cyan-500" />
             <span className="text-zinc-500 text-sm font-mono">EST. 2021</span>
           </div>
         </div>
@@ -57,6 +52,17 @@ export default function Home() {
           </div>
         </footer>
       </div>
+
+      <style jsx>{`
+        @keyframes gradient-shift {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
+        .animate-gradient-text {
+          animation: gradient-shift 8s ease infinite;
+        }
+      `}</style>
     </main>
   );
 }

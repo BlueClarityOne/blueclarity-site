@@ -1,14 +1,10 @@
 "use client";
-import { useTheme } from "./ThemeProvider";
 
 export function LinesBackground() {
-  const { theme } = useTheme();
-  const bgColor = theme === "black" ? "#000000" : "#0a1628";
-
   return (
     <div className="fixed inset-0 pointer-events-none z-0">
       {/* Background */}
-      <div className="absolute inset-0" style={{ backgroundColor: bgColor }} />
+      <div className="absolute inset-0 bg-[#0a1628]" />
       
       {/* Simple SVG lines - full viewport */}
       <svg 
@@ -20,11 +16,6 @@ export function LinesBackground() {
             <stop offset="0%" stopColor="#3b82f6" stopOpacity="0" />
             <stop offset="50%" stopColor="#3b82f6" stopOpacity="0.4" />
             <stop offset="100%" stopColor="#3b82f6" stopOpacity="0" />
-          </linearGradient>
-          <linearGradient id="fadeLeft" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#06b6d4" stopOpacity="0" />
-            <stop offset="50%" stopColor="#06b6d4" stopOpacity="0.3" />
-            <stop offset="100%" stopColor="#06b6d4" stopOpacity="0" />
           </linearGradient>
         </defs>
         
