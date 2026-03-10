@@ -31,14 +31,24 @@ export default function Home() {
 
       {/* Hero */}
       <div className="flex-1 flex flex-col justify-center px-8 pb-32 max-w-4xl">
-        <h1 className="text-4xl md:text-6xl font-light leading-[1.1] mb-8">
+        <div className="mb-6">
+          <span 
+            className="text-sm font-mono tracking-widest uppercase"
+            style={{ color: colors.primary }}
+          >
+            Web3 Marketing
+          </span>
+        </div>
+        <h1 className="text-5xl md:text-7xl font-light leading-[1.1] mb-8">
+          Brand Strategy
+          <br />
           <span 
             className="text-transparent bg-clip-text"
             style={{
               backgroundImage: `linear-gradient(to right, ${colors.primary}, ${colors.secondary})`,
             }}
           >
-            Web3 Marketing & Brand Strategy
+            + Market Positioning
           </span>
         </h1>
         <p className="text-zinc-400 text-lg max-w-xl leading-relaxed">
