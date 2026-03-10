@@ -3,11 +3,10 @@ import Link from "next/link";
 import { useTheme } from "@/components/ThemeProvider";
 
 export default function Home() {
-  const { colors, theme } = useTheme();
-  const bgColor = theme === "black" ? "#000000" : "#0a1628";
+  const { colors } = useTheme();
 
   return (
-    <main className="min-h-screen text-white relative overflow-hidden" style={{ backgroundColor: bgColor }}>
+    <main className="min-h-screen text-white relative overflow-hidden">
       {/* Content */}
       <div className="relative z-10 min-h-screen flex flex-col">
         {/* Nav */}

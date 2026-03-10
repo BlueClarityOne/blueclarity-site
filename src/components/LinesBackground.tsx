@@ -7,9 +7,12 @@ export function LinesBackground() {
   // Use blue colors for lines regardless of theme (visible on all backgrounds)
   const lineColor = theme === "black" ? "#3b82f6" : colors.primary;
   const lineColor2 = theme === "black" ? "#06b6d4" : colors.secondary;
+  const bgColor = theme === "black" ? "#000000" : "#0a1628";
 
   return (
-    <div className="fixed inset-0 overflow-hidden pointer-events-none">
+    <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
+      {/* Background color */}
+      <div className="absolute inset-0" style={{ backgroundColor: bgColor }} />
       {/* Right side lines */}
       <svg
         className="absolute top-0 right-0 w-[800px] h-[800px] opacity-40"
