@@ -26,7 +26,7 @@ export default function Home() {
         </nav>
 
         {/* Hero */}
-        <div className="flex-1 flex flex-col justify-center px-8 pb-48 pt-16 max-w-4xl">
+        <div className="flex-1 flex flex-col justify-start px-8 pt-24 md:pt-32 max-w-4xl">
           <h1 className="text-6xl md:text-8xl font-light leading-[1.1] mb-8">
             <span style={{ color: colors.primary }}>Web3 Marketing</span>
             <br />
