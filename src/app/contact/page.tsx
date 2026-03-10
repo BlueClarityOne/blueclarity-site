@@ -43,7 +43,7 @@ export default function ContactPage() {
             <div>
               <span className="text-zinc-400 text-sm">X / Twitter</span>
               <p>
-                <a href="https://x.com/blueclarityone" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+                <a href="https://x.com/blue_clarity" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
                   @blueclarityone
                 </a>
               </p>
@@ -65,7 +65,7 @@ export default function ContactPage() {
       <footer className="p-8 flex items-center justify-between text-sm text-zinc-400">
         <span>© {new Date().getFullYear()} Blue Clarity</span>
         <div className="flex gap-6">
-          <a href="https://x.com/blueclarityone" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-900 transition-colors">
+          <a href="https://x.com/blue_clarity" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-900 transition-colors">
             X
           </a>
           <a href="https://www.linkedin.com/in/matt-f-50189439/" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-900 transition-colors">
