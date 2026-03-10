@@ -28,7 +28,7 @@ export default function Home() {
           <span className="text-zinc-400">+ Brand Strategy</span>
         </h1>
         <p className="mt-8 text-zinc-500 text-lg">
-          Building brands in crypto. Based in London.
+          Building crypto brands. Based in London.
         </p>
       </div>
 
