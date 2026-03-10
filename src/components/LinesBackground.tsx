@@ -15,28 +15,28 @@ export function LinesBackground() {
       
       {/* Right side lines */}
       <div 
-        className="absolute -top-64 -right-64 w-[1400px] h-[1400px] opacity-30"
+        className="absolute -top-32 -right-32 w-[1000px] h-[1000px] opacity-50"
         style={{
-          maskImage: 'radial-gradient(ellipse 80% 80% at 100% 0%, black 0%, transparent 70%)',
-          WebkitMaskImage: 'radial-gradient(ellipse 80% 80% at 100% 0%, black 0%, transparent 70%)',
+          maskImage: 'radial-gradient(ellipse 100% 100% at 100% 0%, black 0%, transparent 80%)',
+          WebkitMaskImage: 'radial-gradient(ellipse 100% 100% at 100% 0%, black 0%, transparent 80%)',
         }}
       >
         <svg
           width="100%"
           height="100%"
-          viewBox="0 0 1400 1400"
+          viewBox="0 0 1000 1000"
           fill="none"
         >
-          {Array.from({ length: 100 }).map((_, i) => (
+          {Array.from({ length: 70 }).map((_, i) => (
             <line
               key={`r-${i}`}
-              x1="1400"
+              x1="1000"
               y1="0"
-              x2={1400 - i * 28}
-              y2="1400"
+              x2={1000 - i * 20}
+              y2="1000"
               stroke={lineColor}
-              strokeWidth="1"
-              strokeOpacity="0.7"
+              strokeWidth="1.5"
+              strokeOpacity="0.8"
             />
           ))}
         </svg>
@@ -44,28 +44,28 @@ export function LinesBackground() {
 
       {/* Left side lines */}
       <div 
-        className="absolute -bottom-64 -left-64 w-[1100px] h-[1100px] opacity-20"
+        className="absolute -bottom-32 -left-32 w-[800px] h-[800px] opacity-40"
         style={{
-          maskImage: 'radial-gradient(ellipse 80% 80% at 0% 100%, black 0%, transparent 70%)',
-          WebkitMaskImage: 'radial-gradient(ellipse 80% 80% at 0% 100%, black 0%, transparent 70%)',
+          maskImage: 'radial-gradient(ellipse 100% 100% at 0% 100%, black 0%, transparent 80%)',
+          WebkitMaskImage: 'radial-gradient(ellipse 100% 100% at 0% 100%, black 0%, transparent 80%)',
         }}
       >
         <svg
           width="100%"
           height="100%"
-          viewBox="0 0 1100 1100"
+          viewBox="0 0 800 800"
           fill="none"
         >
-          {Array.from({ length: 80 }).map((_, i) => (
+          {Array.from({ length: 50 }).map((_, i) => (
             <line
               key={`l-${i}`}
               x1="0"
-              y1="1100"
-              x2={i * 22}
+              y1="800"
+              x2={i * 20}
               y2="0"
               stroke={lineColor2}
-              strokeWidth="1"
-              strokeOpacity="0.6"
+              strokeWidth="1.5"
+              strokeOpacity="0.7"
             />
           ))}
         </svg>
