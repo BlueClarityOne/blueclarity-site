@@ -28,28 +28,15 @@ export function LinesBackground() {
           </linearGradient>
         </defs>
         
-        {/* Right corner lines */}
-        {Array.from({ length: 50 }).map((_, i) => (
+        {/* Right corner lines only */}
+        {Array.from({ length: 60 }).map((_, i) => (
           <line
             key={`r-${i}`}
             x1="100%"
             y1="0"
-            x2={`${100 - i * 3}%`}
+            x2={`${100 - i * 2.5}%`}
             y2="100%"
             stroke="url(#fadeRight)"
-            strokeWidth="1"
-          />
-        ))}
-        
-        {/* Left corner lines */}
-        {Array.from({ length: 40 }).map((_, i) => (
-          <line
-            key={`l-${i}`}
-            x1="0"
-            y1="100%"
-            x2={`${i * 3}%`}
-            y2="0"
-            stroke="url(#fadeLeft)"
             strokeWidth="1"
           />
         ))}
