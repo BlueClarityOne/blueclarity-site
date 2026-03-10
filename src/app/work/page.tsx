@@ -59,13 +59,12 @@ export default function WorkPage() {
           
           <div className="space-y-12">
             {work.map((item, i) => (
-              <div key={i} className="border-l-2 border-blue-500/30 pl-8 py-2 hover:border-blue-400 transition-colors">
-                <div className="flex items-baseline justify-between mb-2">
-                  <h2 className="text-xl font-medium">{item.company}</h2>
+              <div key={i} className="border-l-2 border-blue-500/30 pl-8 py-4 hover:border-blue-400 transition-colors">
+                <div className="flex items-baseline justify-between mb-3">
+                  <h2 className="text-3xl font-medium">{item.company}</h2>
                   <span className="text-sm text-zinc-500 font-mono">{item.period}</span>
                 </div>
-                <p className="text-blue-400 text-sm mb-3">{item.role}</p>
-                <p className="text-zinc-400 leading-relaxed">{item.description}</p>
+                <p className="text-blue-400 text-lg">{item.role}</p>
               </div>
             ))}
           </div>
