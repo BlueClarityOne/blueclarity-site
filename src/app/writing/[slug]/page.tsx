@@ -3,6 +3,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { notFound } from "next/navigation";
+import MarkdownContent from "./MarkdownContent";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -84,28 +85,7 @@ export default async function PostPage({ params }: Props) {
             <h1 className="text-4xl font-light mt-2">{post.title}</h1>
           </header>
 
-          <div className="prose prose-invert prose-zinc max-w-none">
-            {post.content.split("\n\n").map((paragraph, i) => {
-              if (!paragraph.trim()) return null;
-              if (paragraph.startsWith("## ")) {
-                return <h2 key={i} className="text-2xl font-medium mt-12 mb-4 text-white">{paragraph.slice(3)}</h2>;
-              }
-              if (paragraph.startsWith("### ")) {
-                return <h3 key={i} className="text-xl font-medium mt-8 mb-3 text-white">{paragraph.slice(4)}</h3>;
-              }
-              if (paragraph.startsWith("- ")) {
-                const items = paragraph.split("\n").filter(l => l.startsWith("- "));
-                return (
-                  <ul key={i} className="list-none space-y-2 my-4">
-                    {items.map((item, j) => (
-                      <li key={j} className="text-zinc-400 pl-4 border-l-2 border-blue-500/30">{item.slice(2)}</li>
-                    ))}
-                  </ul>
-                );
-              }
-              return <p key={i} className="text-zinc-400 leading-relaxed mb-4">{paragraph}</p>;
-            })}
-          </div>
+          <MarkdownContent content={post.content} />
         </article>
 
         {/* Footer */}
