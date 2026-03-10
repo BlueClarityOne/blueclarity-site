@@ -13,63 +13,67 @@ export function LinesBackground() {
       {/* Background color */}
       <div className="absolute inset-0" style={{ backgroundColor: bgColor }} />
       
-      {/* Right side lines - extending off screen */}
-      <svg
-        className="absolute -top-32 -right-32 opacity-35"
-        width="1200"
-        height="1200"
-        viewBox="0 0 1200 1200"
-        fill="none"
+      {/* Right side lines */}
+      <div 
+        className="absolute -top-64 -right-64 w-[1400px] h-[1400px] opacity-30"
+        style={{
+          maskImage: 'radial-gradient(ellipse 80% 80% at 100% 0%, black 0%, transparent 70%)',
+          WebkitMaskImage: 'radial-gradient(ellipse 80% 80% at 100% 0%, black 0%, transparent 70%)',
+        }}
       >
-        <defs>
-          <linearGradient id="lineGrad1" x1="100%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stopColor={lineColor} stopOpacity="0.8" />
-            <stop offset="100%" stopColor={lineColor} stopOpacity="0" />
-          </linearGradient>
-        </defs>
-        {Array.from({ length: 80 }).map((_, i) => (
-          <line
-            key={`r-${i}`}
-            x1="1200"
-            y1="0"
-            x2={1200 - i * 30}
-            y2="1200"
-            stroke="url(#lineGrad1)"
-            strokeWidth="1"
-          />
-        ))}
-      </svg>
+        <svg
+          width="100%"
+          height="100%"
+          viewBox="0 0 1400 1400"
+          fill="none"
+        >
+          {Array.from({ length: 100 }).map((_, i) => (
+            <line
+              key={`r-${i}`}
+              x1="1400"
+              y1="0"
+              x2={1400 - i * 28}
+              y2="1400"
+              stroke={lineColor}
+              strokeWidth="1"
+              strokeOpacity="0.7"
+            />
+          ))}
+        </svg>
+      </div>
 
-      {/* Left side lines - extending off screen */}
-      <svg
-        className="absolute -bottom-32 -left-32 opacity-25"
-        width="900"
-        height="900"
-        viewBox="0 0 900 900"
-        fill="none"
+      {/* Left side lines */}
+      <div 
+        className="absolute -bottom-64 -left-64 w-[1100px] h-[1100px] opacity-20"
+        style={{
+          maskImage: 'radial-gradient(ellipse 80% 80% at 0% 100%, black 0%, transparent 70%)',
+          WebkitMaskImage: 'radial-gradient(ellipse 80% 80% at 0% 100%, black 0%, transparent 70%)',
+        }}
       >
-        <defs>
-          <linearGradient id="lineGrad2" x1="0%" y1="100%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor={lineColor2} stopOpacity="0.7" />
-            <stop offset="100%" stopColor={lineColor2} stopOpacity="0" />
-          </linearGradient>
-        </defs>
-        {Array.from({ length: 60 }).map((_, i) => (
-          <line
-            key={`l-${i}`}
-            x1="0"
-            y1="900"
-            x2={i * 25}
-            y2="0"
-            stroke="url(#lineGrad2)"
-            strokeWidth="1"
-          />
-        ))}
-      </svg>
+        <svg
+          width="100%"
+          height="100%"
+          viewBox="0 0 1100 1100"
+          fill="none"
+        >
+          {Array.from({ length: 80 }).map((_, i) => (
+            <line
+              key={`l-${i}`}
+              x1="0"
+              y1="1100"
+              x2={i * 22}
+              y2="0"
+              stroke={lineColor2}
+              strokeWidth="1"
+              strokeOpacity="0.6"
+            />
+          ))}
+        </svg>
+      </div>
 
       {/* Subtle grid */}
       <div
-        className="absolute inset-0 opacity-[0.02]"
+        className="absolute inset-0 opacity-[0.015]"
         style={{
           backgroundImage: `
             linear-gradient(${lineColor}60 1px, transparent 1px),
