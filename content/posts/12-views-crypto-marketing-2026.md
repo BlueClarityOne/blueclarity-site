@@ -1,6 +1,6 @@
 ---
 title: "12 Views on How Crypto Marketing Changes in 2026"
-date: "2026-03-11"
+date: "2025-12-26"
 excerpt: "The winners won't be the loudest on CT. DeFi is growing up, and marketing has to grow up with it."
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Tradition Is Just Marketing That Won"
-date: "2026-03-11"
+date: "2026-01-09"
 excerpt: "Baked beans aren't British. Their place in UK culture was manufactured by Heinz over decades."
 ---
 
