@@ -36,8 +36,21 @@ export default function Home() {
             Building crypto brands. Based in London.
           </p>
           
+          {/* CTA Button */}
+          <div className="mt-12">
+            <a 
+              href="mailto:claritydatainsights@gmail.com?subject=Enquiry" 
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-medium rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40"
+            >
+              Enquire
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+          
           {/* Accent line */}
-          <div className="mt-12 flex items-center gap-4">
+          <div className="mt-8 flex items-center gap-4">
             <div className="h-px w-16 bg-gradient-to-r from-blue-500 to-cyan-500" />
             <span className="text-zinc-500 text-sm font-mono">EST. 2021</span>
           </div>
